@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MoveAlarm</string>
+    <string name="title_activity_ringing_alarm_activty">RingingAlarmActivty</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="dismissed_alarm">You have successfully dismissed your alarm!</string>
+</resources>
