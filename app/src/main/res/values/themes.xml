@@ -22,7 +22,16 @@
     </style>
 
     <style name="ThemeOverlay.MoveAlarm.FullscreenContainer" parent="">
-        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
-        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+        <item name="fullscreenBackgroundColor">@color/white</item>
+        <item name="fullscreenTextColor">@color/black</item>
     </style>
+
+    <style name="Theme.MoveAlarm.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MoveAlarm.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MoveAlarm.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
