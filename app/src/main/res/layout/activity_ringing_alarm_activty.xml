@@ -5,41 +5,21 @@
     android:layout_height="match_parent"
     android:background="?attr/fullscreenBackgroundColor"
     android:theme="@style/ThemeOverlay.MoveAlarm.FullscreenContainer"
-    tools:context=".RingingAlarmActivity">
+    tools:context=".RingingAlarmActivty">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
-    <LinearLayout
+    <TextView
+        android:id="@+id/fullscreen_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:src="@drawable/ic_baseline_access_alarm_24" />
-
-        <TextView
-            android:id="@+id/fullscreen_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:keepScreenOn="true"
-            android:text="@string/dummy_content"
-            android:textColor="?attr/fullscreenTextColor"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:text="DISMISS"
-            android:textAllCaps="true"
-            android:textSize="30sp"
-            />
-    </LinearLayout>
-
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:text="@string/dummy_content"
+        android:textColor="?attr/fullscreenTextColor"
+        android:textSize="50sp"
+        android:textStyle="bold" />
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
@@ -52,14 +32,20 @@
             android:id="@+id/fullscreen_content_controls"
             style="@style/Widget.Theme.MoveAlarm.ButtonBar.Fullscreen"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             tools:ignore="UselessParent">
 
+            <Button
+                android:id="@+id/dummy_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dummy_button" />
 
         </LinearLayout>
-
     </FrameLayout>
 
 </FrameLayout>

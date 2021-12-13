@@ -6,33 +6,4 @@
     android:layout_height="match_parent"
     tools:context=".DismissAlarmShakeActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal|center_vertical"
-        >
-
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@drawable/ic_baseline_edgesensor_high_24"
-            />
-
-        <TextView
-            android:id="@+id/activity_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="@string/dismiss_alarm_shake_text"
-            android:textSize="30sp" />
-        <TextView
-            android:id="@+id/count_of_shakes_left"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="@string/shake_amount_left"
-            android:textSize="20sp" />
-    </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

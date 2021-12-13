@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="pro.marschall.uek.movealarm">
+    package="pro.marschall.uek.movealarm" >
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MoveAlarm"
-        tools:targetApi="31">
+        tools:targetApi="31" >
         <activity
             android:name=".DismissedAlarmActivity"
             android:exported="false" />
@@ -23,7 +23,7 @@
             android:name=".DismissAlarmShakeActivity"
             android:exported="false" />
         <activity
-            android:name=".RingingAlarmActivity"
+            android:name=".RingingAlarmActivty"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
             android:label="@string/title_activity_ringing_alarm_activty"
@@ -33,7 +33,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
