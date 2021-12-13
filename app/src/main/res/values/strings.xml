@@ -2,6 +2,12 @@
     <string name="app_name">MoveAlarm</string>
     <string name="title_activity_ringing_alarm_activty">RingingAlarmActivty</string>
     <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="dummy_content">YOUR ALARM IS\n RINGING</string>
     <string name="dismissed_alarm">You have successfully dismissed your alarm!</string>
+    <string name="select_type_dropdown">Select your alarm type</string>
+
+    <string name="newAlarmSubmitButton">Create new Alarm</string>
+    <string name="closing_app">Closing app…</string>
+    <string name="dismiss_alarm_shake_text">Shake your phone!</string>
+    <string name="shake_amount_left">30</string>
 </resources>
