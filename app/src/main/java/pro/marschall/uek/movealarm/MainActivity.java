@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         fabButton.setOnClickListener(v -> {
             // Intent to go to NewAlarmActivity
             Intent intent = new Intent(this, RingingAlarmActivity.class);
+            intent.putExtra("ALARM_TYPE", "SHAKE");
             startActivity(intent);
         });
 
