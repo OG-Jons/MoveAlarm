@@ -5,11 +5,14 @@ import android.annotation.SuppressLint;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowInsets;
@@ -25,6 +28,8 @@ import pro.marschall.uek.movealarm.models.AlarmModel;
 public class RingingAlarmActivity extends AppCompatActivity {
 
     Button nextButton;
+
+    Vibrator v;
 
 
     /**
@@ -116,6 +121,9 @@ public class RingingAlarmActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
 
+        v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        v.vibrate(VibrationEffect.createOneShot(60000, VibrationEffect.DEFAULT_AMPLITUDE));
+
         binding = ActivityRingingAlarmActivtyBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -133,6 +141,7 @@ public class RingingAlarmActivity extends AppCompatActivity {
             if (alarmType.equals("SHAKE")) {
                 Intent nextIntent = new Intent(RingingAlarmActivity.this, DismissAlarmShakeActivity.class);
                 startActivity(nextIntent);
+                v.cancel();
             }
         });
 
@@ -196,5 +205,17 @@ public class RingingAlarmActivity extends AppCompatActivity {
     private void delayedHide(int delayMillis) {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        v.cancel();  // cancel for example here
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        v.cancel();   // or cancel here
     }
 }
