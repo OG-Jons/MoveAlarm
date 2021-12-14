@@ -133,9 +133,6 @@ public class RingingAlarmActivity extends AppCompatActivity {
             if (alarmType.equals("SHAKE")) {
                 Intent nextIntent = new Intent(RingingAlarmActivity.this, DismissAlarmShakeActivity.class);
                 startActivity(nextIntent);
-            } else if (alarmType.equals("MATH")) {
-                Intent nextIntent = new Intent(RingingAlarmActivity.this, DismissAlarmMathActivity.class);
-                startActivity(nextIntent);
             }
         });
 

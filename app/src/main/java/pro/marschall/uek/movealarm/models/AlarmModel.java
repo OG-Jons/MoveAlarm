@@ -1,8 +1,9 @@
 package pro.marschall.uek.movealarm.models;
 
+import java.io.Serializable;
 import java.time.LocalTime;
 
-public class AlarmModel {
+public class AlarmModel implements Serializable {
     LocalTime time;
     boolean active;
     String dismissType;
@@ -17,8 +18,8 @@ public class AlarmModel {
         return this.time;
     }
 
-    public boolean isActive() {
-        return this.active;
+    public String isActive() {
+        return Boolean.toString(this.active);
     }
 
     public void setTime(LocalTime time) {
